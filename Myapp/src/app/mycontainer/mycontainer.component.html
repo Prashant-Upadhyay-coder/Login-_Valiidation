@@ -1,0 +1,81 @@
+<div class="container-fluid" style="background-color: #172f4ed9">
+
+    <div class="page-container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 Card_div d-flex justify-content-center align-items-center">
+                <div class="card">
+
+
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-12 text-center mb-4 mt-5">
+                            <img src="../assets/TS hrms.png" alt="" class="img-fluid" width="85%">
+                        </div>
+                        <div class="col-md-6" style="color: white;">
+                            <div class="row">
+                                <div class="col-sm-12 mb-2">
+                                    <h6>LOGIN HERE</h6>
+                                </div>
+                            </div>
+
+                            <form [formGroup]="myform" novalidate>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="name">User Name</label>
+                                        
+                                        <input type="text" class="form-control" formControlName="username"
+                                            placeholder="Enter User Name">
+                                            <p class="mb-0" *ngIf="myform.get('username')?.invalid && myform.get('username')?.touched" >
+                                                   Enter Atleast 6 character
+                                                </p>
+                                                
+                                    </div>
+                                </div>
+                        
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" formControlName="password"
+                                            placeholder="Enter Password">
+                                            <p class="mb-0" *ngIf="myform.get('password')?.invalid && myform.get('password')?.touched" >
+                                             Enter Atleast 6 character
+                                            </p>
+                                    </div>
+                                </div>
+                            
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="rollid">Roll Id</label>
+                                      
+                                        <select name="" class="form-control" formControlName="rollid" id="rollid">
+                                            <option value="" disabled>--Select Roll Id--</option>
+                                            <option value="1">rr</option>
+                                            <option value="2">rr</option>
+                                        </select>
+                                        <p class="mb-0" *ngIf="myform.get('rollid')?.invalid && myform.get('rollid')?.touched" >
+                                           select any one
+                                        </p>
+                                    </div>
+                                </div>
+                             
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-12 mt-2 mb-2">
+                                        <button type="button" [ngClass]="isactive ?'btn btn-dark':'btn btn-success'" (click)="onrrr()" >{{isactive ?"LOGIN":"DONE"}}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                  <div class="row">
+            <div class="offset-6 col-sm-6 mb-1 mt-2" [ngStyle]="multistyle" style="display: none;">
+                <p [ngClass]="isactive ?'alert alert-danger' :'alert alert-success' " style="display: flex;justify-content: center; letter-spacing: 4px;">{{ isactive ? errormsg: successmsg}}</p>
+        
+            </div>
+        </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+.card{
+    background-color: #14213db8;
+    padding: 52px 57px 67px 44px;
+
+}
+.alert{
+    padding: 2px;
+    margin-bottom: 0px;
+}
+.Card_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-top: 8%;
+}
+.container-fluid{
+    height: 100vh;
+}
+label{
+    color: lightgray;
+}
+input{
+ font-weight: bold;
+ color: black;
+}
